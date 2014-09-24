@@ -1,0 +1,28 @@
+{
+  "name": "interspell",
+  "version": "0.0.1",
+  "description": "Simple javascript interval converter",
+  "main": "lib/interspell.js",
+  "scripts": {
+    "test": "./test-all.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/panta82/interspell.git"
+  },
+  "keywords": [
+    "interval",
+    "timespan",
+    "time",
+    "human"
+  ],
+  "author": "Panta82",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/panta82/interspell/issues"
+  },
+  "homepage": "https://github.com/panta82/interspell",
+  "devDependencies": {
+    "jasmine": "^2.0.1"
+  }
+}
