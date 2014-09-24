@@ -2,6 +2,8 @@
 
 ----
 
+## NOT READY YET!
+
 Very simple library to manipulate human-readable time intervals.
 
 Install with:
