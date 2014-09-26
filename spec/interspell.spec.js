@@ -35,4 +35,28 @@ describe("Interspell", function () {
 			done();
 		});
 	});
+
+	describe("when used as library", function () {
+
+		it("can convert object into milliseconds", function (done) {
+			var res = Interspell.value({hour: 1, min: 16, sec: 11, ms: 474 });
+			expect(res).toEqual(474 + 11 * 1000 + 16 * 60 * 1000 + 1 * 60 * 60 * 1000);
+
+			done();
+		});
+
+		it("can convert strings into milliseconds", function (done) {
+			var res = Interspell.value("1 hour and 14 seconds");
+			expect(res).toEqual(14 * 1000 + 1 * 60 * 60 * 1000);
+
+			done();
+		});
+
+		it("can stringify an object", function (done) {
+			var res = Interspell.format({hour: 1, min: 16, sec: 11, ms: 474 }, "full");
+			expect(res).toEqual("16 minutes, 11 seconds and 474 milliseconds");
+
+			done();
+		});
+	});
 });
