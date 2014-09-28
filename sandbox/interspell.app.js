@@ -12,8 +12,13 @@ snippet(0, function () {
 	console.log(i.toString(Interspell.FORMATS.condensed));
 });
 
-snippet(1, function () {
+snippet(0, function () {
 	var res = Interspell.format({hour: 1, min: 16, sec: 11, ms: 474 }, "full");
+	console.log(res);
+});
+
+snippet(1, function () {
+	var res = Interspell.format({year: 2, month: 3, day: 13 }, "iso");
 	console.log(res);
 });
 

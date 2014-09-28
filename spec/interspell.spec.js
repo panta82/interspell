@@ -28,7 +28,7 @@ describe("Interspell", function () {
 			done();
 		});
 
-		it("can be used with strings", function (done) {
+		it("can work with string formats", function (done) {
 			var i = new Interspell("1 minute and 30 seconds");
 			expect(i.toString(Interspell.FORMATS.condensed)).toEqual("1m30s");
 
@@ -54,7 +54,14 @@ describe("Interspell", function () {
 
 		it("can stringify an object", function (done) {
 			var res = Interspell.format({hour: 1, min: 16, sec: 11, ms: 474 }, "full");
-			expect(res).toEqual("16 minutes, 11 seconds and 474 milliseconds");
+			expect(res).toEqual("1 hour, 16 minutes, 11 seconds and 474 milliseconds");
+
+			done();
+		});
+
+		it("can stringify milliseconds", function (done) {
+			var res = Interspell.format(16346);
+			expect(res).toEqual("16 sec, 346 ms");
 
 			done();
 		});
