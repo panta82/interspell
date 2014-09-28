@@ -17,8 +17,19 @@ snippet(0, function () {
 	console.log(res);
 });
 
-snippet(1, function () {
+snippet(0, function () {
 	var res = Interspell.format({year: 2, month: 3, day: 13 }, "iso");
 	console.log(res);
 });
+
+snippet(0, function () {
+	var i = new Interspell("5d12h1m34ms");
+	console.log(i);
+});
+
+snippet(1, function () {
+	var i = new Interspell("D1Y3M12DT13H42M12S");
+	console.log(i);
+});
+
 
