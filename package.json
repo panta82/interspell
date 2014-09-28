@@ -12,12 +12,18 @@
 	},
 	"keywords": [
 		"interval",
+		"duration",
 		"timespan",
+		"milliseconds",
+		"ms",
 		"time",
+		"ISO 8601",
+		"8601",
+		"human-readable",
 		"human"
 	],
 	"author": "Panta82",
-	"license": "ISC",
+	"license": "Apache2",
 	"bugs": {
 		"url": "https://github.com/panta82/interspell/issues"
 	},
