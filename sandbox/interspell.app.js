@@ -27,9 +27,14 @@ snippet(0, function () {
 	console.log(i);
 });
 
-snippet(1, function () {
+snippet(0, function () {
 	var i = new Interspell("D1Y3M12DT13H42M12S");
 	console.log(i);
 });
 
+snippet(1, function () {
+	var i1 = new Interspell("2 hours, 24 minutes");
+	var i2 = new Interspell(i1.value - Interspell.value("16min"));
 
+	console.log(i2.toString("full")); // "2 hours and 8 minutes"
+});
