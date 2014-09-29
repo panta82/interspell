@@ -92,4 +92,18 @@ describe("Interspell", function () {
 			}
 		}
 	]);
+
+	testFormat("postgres", [
+		{
+			txt: "1 year 2 months 3 days 4 hours 5 minutes 6 seconds",
+			ob: {
+				year: 1,
+				month: 2,
+				day: 3,
+				hour: 4,
+				min: 5,
+				sec: 6
+			}
+		}
+	]);
 });
