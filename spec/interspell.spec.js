@@ -28,9 +28,16 @@ describe("Interspell", function () {
 			done();
 		});
 
-		it("can work with string formats", function (done) {
+		it("can be created from string", function (done) {
 			var i = new Interspell("1 minute and 30 seconds");
 			expect(i.toString(Interspell.FORMATS.condensed)).toEqual("1m30s");
+
+			done();
+		});
+
+		it("can be created from hash", function (done) {
+			var i = new Interspell({milliseconds: 143, h: 1, abc: 123, min: 12});
+			expect(i.toString(Interspell.FORMATS.condensed)).toEqual("1h12m143ms");
 
 			done();
 		});
@@ -62,6 +69,13 @@ describe("Interspell", function () {
 		it("can stringify milliseconds", function (done) {
 			var res = Interspell.format(16346);
 			expect(res).toEqual("16 sec, 346 ms");
+
+			done();
+		});
+
+		it("can stringify a string", function (done) {
+			var res = Interspell.format("1h 16m 11s 474ms", "full");
+			expect(res).toEqual("1 hour, 16 minutes, 11 seconds and 474 milliseconds");
 
 			done();
 		});
