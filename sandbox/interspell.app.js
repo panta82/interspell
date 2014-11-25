@@ -39,7 +39,10 @@ snippet(0, function () {
 	console.log(i2.toString("full")); // "2 hours and 8 minutes"
 });
 
-snippet(1, function () {
+snippet(0, function () {
 	console.log(Interspell.format(604800000, "postgres"));
 });
 
+snippet(1, function () {
+	console.log(Interspell.format({month: 1}, "condensed"));
+});
